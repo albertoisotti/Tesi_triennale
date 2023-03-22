@@ -1,0 +1,61 @@
+{% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://github.com/fent/randexp.js/releases/download/v0.4.3/randexp.min.js"></script>
+<html>
+<head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script type="module" src="{% static 'js/index.js' %}"></script>
+</head>
+<body>
+<div id="data" data-my-object="{{ data }}"></div>
+<div id="data2" data-my-object="{{ data2 }}"></div>
+<div id="data3" data-my-object="{{ data3 }}"></div>
+<div id="veicoli" data-my-object="{{ veicoli }}"></div>
+
+<div class="row">
+    <div class="block" id="data_test" data-my-object="{{ data_test }}"></div>
+
+</div>
+<div>
+
+    <div id="map"></div>
+
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA31l5d8FyabjI6XC9GG89K5nFFX29qT-E&callback=initMap"
+            defer
+    ></script>
+</div>
+</body>
+</html>
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <title></title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+    </style>
+
+</head>
+<body>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA31l5d8FyabjI6XC9GG89K5nFFX29qT-E">
+
+</script>
+<div id="data" data-my-object="{{data}}"></div>
+<hr/>
+<div id="dvMap" style="width: 400px; height: 500px">
+</div>
+</body>
+</html>
+-->

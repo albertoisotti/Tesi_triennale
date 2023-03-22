@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  web:
+    image: tomcat:8.0.32-jre8
+    ports:
+      - '8082:8080'
+  ode:
+    image: opentosca/ode
+    ports:
+      - '8083:9763'
+      - '8084:8080'

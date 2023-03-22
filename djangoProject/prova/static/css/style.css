@@ -1,0 +1,248 @@
+#map {
+    height: 100%;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+    margin: auto;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.block {
+    width: 200px;
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #f44336;
+    border-radius: 8px;
+}
+
+#controlButton {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    color: rgb(25, 25, 25);
+    cursor: pointer;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 38px;
+    /*margin: 8px 0 22px;*/
+    padding: 0 5px;
+    text-align: center;
+    padding-right: 10px;
+}
+
+#divider {
+    width: 5px;
+    height: auto;
+    display: inline-block;
+}
+
+/*
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100px;
+}
+*/
+.select {
+    height: 42px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    color: rgb(25, 25, 25);
+    cursor: pointer;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 38px;
+    /*margin: 8px 0 22px;*/
+    padding: 0 5px;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.select ::-ms-expand {
+    display: none;
+}
+
+.select :hover,
+.select :focus {
+    color: #000000;
+    background: #ffffff;
+}
+
+.select :disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.select_arrow {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    width: 0px;
+    height: 0px;
+    border: solid #7b7b7b;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.select :hover ~ .select_arrow,
+.select :focus ~ .select_arrow {
+    border-color: #000000;
+}
+
+.select :disabled ~ .select_arrow {
+    border-top-color: #cccccc;
+}
+
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 60%;
+    width: 150px;
+    /*position: fixed;*/
+    z-index: 1;
+    top: 0;
+
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    display: block;
+    border: none;
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* Main content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: white;
+    color: black;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #fff;
+    padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/* The sidepanel menu */
+.sidepanel {
+    height: 50%; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #fff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 10px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    border-radius: 3px;
+    border: transparent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    margin: 0.5% 0 0 0.5%;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #111;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    /*position: absolute;*/
+    top: 0;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 110px;
+    padding: 8px 8px 8px 8px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    color: rgb(25, 25, 25);
+    cursor: pointer;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 38px;
+    margin: 15px 8px 0 22px;
+    padding: 0 5px;
+    text-align: center;
+    padding-right: 10px;
+}
